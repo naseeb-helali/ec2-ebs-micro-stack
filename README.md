@@ -17,12 +17,14 @@ Stand up a minimal EC2 web server with **IMDSv2** enforced, an **encrypted gp3**
 - Professional documentation: **Diagrams**, **Runbooks**, **Configs**, **User Data**, and a rich **README**.
 
 ## 🗂️ Repository Structure
+```
 - `diagrams/` — Mermaid diagrams (`architecture.md`, `dataflow.md`)
 - `runbooks/` — Ops procedures (`incident-status-check.md`, `backup-restore-ebs.md`)
 - `configs/` — Reference configs (`instance-plan.yaml`, `dlm-policy.yaml`, `cw-alarms.json`, `tags.json`)
 - `userdata/` — Bootstrap script (`web-nginx.sh`)
 - `amis/` — Golden AMI notes
 - `docs/` — Engineering decisions
+```
 
 ## 🚀 Quick Start
 1. Launch a small EC2 with `HttpTokens=required` (IMDSv2) and an encrypted **gp3** volume.

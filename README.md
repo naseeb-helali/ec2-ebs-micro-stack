@@ -17,7 +17,7 @@ Stand up a minimal EC2 web server with **IMDSv2** enforced, an **encrypted gp3**
 - Professional documentation: **Diagrams**, **Runbooks**, **Configs**, **User Data**, and a rich **README**.
 
 ## 🗂️ Repository Structure
-```
+```bash
 - `diagrams/` — Mermaid diagrams (`architecture.md`, `dataflow.md`)
 - `runbooks/` — Ops procedures (`incident-status-check.md`, `backup-restore-ebs.md`)
 - `configs/` — Reference configs (`instance-plan.yaml`, `dlm-policy.yaml`, `cw-alarms.json`, `tags.json`)

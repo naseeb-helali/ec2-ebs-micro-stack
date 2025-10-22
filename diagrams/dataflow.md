@@ -1,3 +1,5 @@
+`docs(diagrams): refine data flow and notes`
+
 # Data Flow
 
 ```mermaid
@@ -10,6 +12,12 @@ sequenceDiagram
 
   U->>EC2: HTTP request
   EC2->>EBS: Read/Write data
-  Note over EC2,EBS: EBS encrypted via KMS (transparent to the app)
+  Note over EC2,EBS: EBS encryption via KMS (transparent)
   EC2->>CW: Status checks (Basic Monitoring)
-  DLM-->>EBS: Scheduled snapshots
+  DLM-->>EBS: Scheduled snapshots (daily)
+```
+## Notes
+
+- No secrets in User Data; IMDSv2 required.
+
+- Snapshot retention is intentionally short in development to minimize cost.

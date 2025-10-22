@@ -1,8 +1,12 @@
-`chore(configs): add unified resource tagging`
+`chore(configs): define unified tagging set for cost, ops and backups`
+
 [
-  { "Key": "Project", "Value": "ec2-ebs-micro-stack" },
-  { "Key": "Owner",   "Value": "naseeb.helali" },
-  { "Key": "Env",     "Value": "dev" },
-  { "Key": "Cost",    "Value": "low" },
-  { "Key": "Backup",  "Value": "dlm-daily" }
+  { "Key": "Project",        "Value": "ec2-ebs-micro-stack" },
+  { "Key": "Owner",          "Value": "naseeb.helali" },
+  { "Key": "Env",            "Value": "dev" },
+  { "Key": "Cost",           "Value": "low" },
+  { "Key": "Backup",         "Value": "dlm-daily" },
+  { "Key": "Teardown",       "Value": "safe" },
+  { "Key": "Compliance",     "Value": "dev-nonprod" },
+  { "Key": "Confidentiality","Value": "internal" }
 ]

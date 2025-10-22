@@ -21,3 +21,11 @@ flowchart LR
   EC2 --> CW
   EBS --> DLM
   EBS --> KMS
+```
+## Highlights
+
+- IMDSv2 enforced to protect instance metadata.
+
+- EBS encrypted by account-default KMS key (transparent to the app).
+
+- DLM automates backups; short retention for dev to control cost.

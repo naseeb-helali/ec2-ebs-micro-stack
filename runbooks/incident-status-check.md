@@ -1,9 +1,6 @@
----
-
 ### 4) `runbooks/incident-status-check.md`  
 `docs(runbook): add system status check incident procedure`
 
-```markdown
 # Runbook — EC2 System Status Check Failure
 
 ## Symptoms

@@ -1,11 +1,17 @@
-`chore(configs): add DLM snapshot policy reference`
+`chore(configs): refine DLM policy reference (copy tags, enabled state)`
 
 Description: "Daily EBS snapshots for dev (3-day retention)"
-TargetTag: "Backup=dlm-daily"
+Target:
+  ResourceType: Volume
+  Tag: "Backup=dlm-daily"
 Schedule:
+  Name: "daily-dev-backups"
   Frequency: "daily"
   StartTimeUTC: "00:30"
-  RetainDays: 3
+  RetainCount: 3
+Options:
+  CopyTagsFromSource: true
+  State: "Enabled"     # Enabled | Disabled
 Notes:
-  - "Keep dev volumes small to minimize snapshot costs."
-  - "Ensure the target tag exists on the volume."
+  - "Keep volumes small in dev to minimize snapshot storage."
+  - "Snapshots created by DLM will follow policy retention automatically."

@@ -19,9 +19,9 @@ Primary non-functional goals: **Security**, **Cost control**, **Observability**.
 - **Observability**: Basic Monitoring + system status check alarm reference.
 
 ## Diagrams
-- `diagrams/architecture.md` — component/deployment view.  
-- `diagrams/dataflow.md` — request → storage → monitoring → backups.
-- `diagrams/state-lifecycle.md` — EC2 lifecycle including Hibernate.
+`diagrams/architecture.md` — component/deployment view.  
+`diagrams/dataflow.md` — request → storage → monitoring → backups.
+`diagrams/state-lifecycle.md` — EC2 lifecycle including Hibernate.
 
 ## Failure Modes (Phase 1 scope)
 - **System impairment** → CloudWatch system status check triggers the runbook.

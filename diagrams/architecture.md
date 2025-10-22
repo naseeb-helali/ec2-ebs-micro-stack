@@ -11,7 +11,7 @@ flowchart LR
   subgraph Ops[Operations]
     CW[CloudWatch Status Checks]
     DLM[Snapshot DLM Policy]
-    KMS[KMS (EBS Encryption)]
+    KMS["KMS (EBS Encryption)"]
   end
 
   EC2 --> CW

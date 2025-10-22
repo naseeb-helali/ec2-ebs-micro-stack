@@ -1,0 +1,28 @@
+`chore(configs): add instance launch reference plan`
+Instance:
+  Type: t*micro
+  AMI: ubuntu-lts
+  MetadataOptions:
+    HttpTokens: required     # Enforce IMDSv2
+  Hibernate: true            # If supported
+  Security:
+    RootLogin: false
+    UserDataHygiene: "no-secrets"
+EBS:
+  Type: gp3
+  SizeGiB: 8
+  Encrypted: true
+  MultiAttach: false
+Monitoring:
+  Level: Basic
+  Alarms:
+    - Name: system-status-check-failed
+      Action: notify-only
+Backup:
+  DLM:
+    Frequency: daily
+    RetentionDays: 3
+    TargetTag: Backup=dlm-daily
+CostControls:
+  RunHours: "daytime-only"
+  HibernateWhenIdle: true

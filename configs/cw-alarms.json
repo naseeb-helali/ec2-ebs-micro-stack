@@ -1,18 +1,20 @@
-`chore(configs): add CloudWatch system status alarm reference`
+`chore(configs): add CloudWatch system status alarm reference (5m period, notBreaching)`
 
 {
   "Alarms": [
     {
-      "Name": "SystemStatusCheckFailed",
+      "Name": "eems-dev-system-status-check",
       "Metric": "StatusCheckFailed_System",
       "Namespace": "AWS/EC2",
       "Statistic": "Maximum",
-      "Period": 60,
+      "PeriodSeconds": 300,
       "EvaluationPeriods": 1,
       "Threshold": 1,
       "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+      "TreatMissingData": "notBreaching",
       "ActionsEnabled": false,
-      "Description": "Notify on system-level failures"
+      "Description": "Triggers when EC2 system status check fails (Phase 1, Basic Monitoring)."
     }
-  ]
+  ],
+  "Notes": "Console-first reference for Phase 1. For notifications, create an SNS topic and attach it in the alarm actions."
 }

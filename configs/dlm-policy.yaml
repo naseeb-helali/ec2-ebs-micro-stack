@@ -1,0 +1,11 @@
+`chore(configs): add DLM snapshot policy reference`
+
+Description: "Daily EBS snapshots for dev (3-day retention)"
+TargetTag: "Backup=dlm-daily"
+Schedule:
+  Frequency: "daily"
+  StartTimeUTC: "00:30"
+  RetainDays: 3
+Notes:
+  - "Keep dev volumes small to minimize snapshot costs."
+  - "Ensure the target tag exists on the volume."

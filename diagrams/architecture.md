@@ -1,3 +1,4 @@
+## Architecture
 ```mermaid
 flowchart LR
   subgraph AZ[Availability Zone]

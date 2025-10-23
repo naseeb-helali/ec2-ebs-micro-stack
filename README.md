@@ -46,9 +46,6 @@ Stand up a minimal EC2 web server with **IMDSv2** enforced, an **encrypted gp3**
   - Incident: `runbooks/incident-status-check.md`  
   - Backup & Restore: `runbooks/backup-restore-ebs.md`  
   - Validation Plan: `docs/runbooks-validation.md`
-- Promo:  
-  - LinkedIn post: `docs/promo/linkedin-post.md`  
-  - Hiring blurb: `docs/promo/hiring-blurb.md`
 
 ## 🚀 Quick Start
 1. Launch a small EC2 with `HttpTokens=required` (IMDSv2) and an encrypted **gp3** volume.

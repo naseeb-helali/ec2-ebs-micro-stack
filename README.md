@@ -26,6 +26,30 @@ Stand up a minimal EC2 web server with **IMDSv2** enforced, an **encrypted gp3**
 - `docs/` — Engineering decisions
 ```
 
+## 📚 Documentation Map
+- Launch & Validation:  
+  - EC2 Launch: `docs/console-ec2-launch.md`  
+  - Post-Launch Hardening: `docs/post-launch-hardening.md`
+- Operations:  
+  - CloudWatch Alarm: `docs/console-cloudwatch-alarm.md`  
+  - DLM Snapshots: `docs/console-dlm-snapshots.md`  
+  - Hibernate Test: `docs/console-hibernate-test.md`
+- Build Artifacts:  
+  - Golden AMI: `docs/console-golden-ami.md`, `docs/ami-lifecycle.md`
+- Governance:  
+  - Architecture: `docs/architecture.md`  
+  - Trade-offs: `docs/tradeoffs.md`  
+  - ADRs: `docs/adr-001-imdsv2-required.md` … `docs/adr-005-spot-optional-worker.md`  
+  - Threat Model: `docs/threat-model.md`  
+  - Cost Model: `docs/cost-model.md`
+- Runbooks & Drills:  
+  - Incident: `runbooks/incident-status-check.md`  
+  - Backup & Restore: `runbooks/backup-restore-ebs.md`  
+  - Validation Plan: `docs/runbooks-validation.md`
+- Promo:  
+  - LinkedIn post: `docs/promo/linkedin-post.md`  
+  - Hiring blurb: `docs/promo/hiring-blurb.md`
+
 ## 🚀 Quick Start
 1. Launch a small EC2 with `HttpTokens=required` (IMDSv2) and an encrypted **gp3** volume.
 2. Paste `userdata/web-nginx.sh` as **User Data**.

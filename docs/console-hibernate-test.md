@@ -89,7 +89,7 @@ Short-lived status changes can occur. Allow a few minutes and re-check Status ch
 
 #### Append to docs/decisions.md:
 
-`Hibernate Test (YYYY-MM-DD)`
+## Hibernate Test (YYYY-MM-DD)
 - Supported: [yes/no]
 - Enabled-at-launch: [yes/no]
 - Resume time (approx): [N seconds]
